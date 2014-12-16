@@ -42,4 +42,17 @@ class TaskController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    public function removeAction(Task $task)
+    {
+        if(!$task){
+            throw $this->createNotFoundException("This task doesn't exist");
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($task);
+        $em->flush();
+
+        return $this->redirectToRoute('juan_luis_lab_task_list');
+    }
 } 
