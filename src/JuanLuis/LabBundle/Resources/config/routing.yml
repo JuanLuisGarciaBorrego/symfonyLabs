@@ -1,3 +1,7 @@
 juan_luis_lab_homepage:
     path:     /
     defaults: { _controller: JuanLuisLabBundle:Default:index }
+
+juan_luis_lab_task_list:
+    path:     /list
+    defaults: { _controller: JuanLuisLabBundle:Task:list }
