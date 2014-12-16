@@ -29,9 +29,12 @@
                     </td>
                 </tr>
                     {# <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> #}
-                </div>
             {% else %}
-                <p class="bg-success text-center">There aren't tasks</p>
+                <tr>
+                    <th class="bg-success text-center" colspan="3">
+                        There aren't tasks
+                    </th>
+                </tr>
             {% endfor %}
         </table>
     </div>
