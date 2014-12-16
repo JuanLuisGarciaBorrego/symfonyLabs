@@ -1,0 +1,3 @@
+juan_luis_lab_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JuanLuisLabBundle:Default:index }

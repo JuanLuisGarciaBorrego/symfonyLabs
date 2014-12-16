@@ -1,0 +1,4 @@
+juan_luis_lab:
+    resource: "@JuanLuisLabBundle/Resources/config/routing.yml"
+    prefix:   /
+
