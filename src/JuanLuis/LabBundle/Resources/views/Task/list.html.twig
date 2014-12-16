@@ -12,15 +12,28 @@
 
     <!-- Example row of columns -->
     <div class="row">
-        {% for task in tasks %}
-            <div class="col-lg-4">
-                <h2>{{ task.name }}</h2>
-                <p> {{ task.description }}</p>
-                {# <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> #}
-            </div>
-        {% else %}
-            <p class="bg-success text-center">There aren't tasks</p>
-        {% endfor %}
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <td></td>
+            </tr>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ task.name }}</td>
+                    <td class="text-right">
+                        <a class="btn btn-info" href="#" role="button"><i class="fa fa-trash"></i></a>
+                        <a class="btn btn-warning" href="#" role="button"><i class="fa fa-pencil"></i></a>
+                        <a class="btn btn-danger" href="#" role="button"><i class="fa fa-eye"></i></a>
+                    </td>
+                </tr>
+                    {# <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> #}
+                </div>
+            {% else %}
+                <p class="bg-success text-center">There aren't tasks</p>
+            {% endfor %}
+        </table>
     </div>
 
 {% endblock %}
