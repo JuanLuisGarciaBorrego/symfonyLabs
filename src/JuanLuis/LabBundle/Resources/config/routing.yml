@@ -5,3 +5,8 @@ juan_luis_lab_homepage:
 juan_luis_lab_task_list:
     path:     /list
     defaults: { _controller: JuanLuisLabBundle:Task:list }
+
+juan_luis_lab_task_new:
+    path:     /new
+    defaults: { _controller: JuanLuisLabBundle:Task:new }
+    methods: [GET|POST]
