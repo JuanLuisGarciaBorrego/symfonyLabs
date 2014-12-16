@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('bundles/juanluislab/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/juanluislab/css/justified-nav.css') }}"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">Symfony Labs</h3>
+            <div role="navigation">
+                <ul class="nav nav-justified">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+    {% block content %} {% endblock %}
+
+    <footer class="footer">
+        <p>&copy; Company 2014</p>
+    </footer>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
