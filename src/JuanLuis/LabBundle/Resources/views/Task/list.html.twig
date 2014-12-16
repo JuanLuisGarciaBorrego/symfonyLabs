@@ -24,7 +24,7 @@
                     <td>{{ task.name }}</td>
                     <td class="text-right">
                         <a class="btn btn-info" href="#" role="button"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-warning" href="#" role="button"><i class="fa fa-pencil"></i></a>
+                        <a class="btn btn-warning" href="{{ path('juan_luis_lab_task_update', {'id':task.id}) }}" role="button"><i class="fa fa-pencil"></i></a>
                         <a class="btn btn-danger" href="{{ path('juan_luis_lab_task_remove', {'id':task.id}) }}" role="button"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>

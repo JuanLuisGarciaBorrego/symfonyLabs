@@ -14,3 +14,8 @@ juan_luis_lab_task_new:
 juan_luis_lab_task_remove:
     path:     /remove/{id}
     defaults: { _controller: JuanLuisLabBundle:Task:remove }
+
+juan_luis_lab_task_update:
+    path:     /update/{id}
+    defaults: { _controller: JuanLuisLabBundle:Task:update }
+    methods: [GET|POST]

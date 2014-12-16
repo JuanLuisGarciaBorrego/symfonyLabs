@@ -55,4 +55,24 @@ class TaskController extends Controller
 
         return $this->redirectToRoute('juan_luis_lab_task_list');
     }
+
+    public function updateAction(Task $task, Request $request)
+    {
+        $form = $this->createForm(new TaskType(), $task);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($task);
+            $em->flush();
+
+            return $this->redirectToRoute('juan_luis_lab_task_list');
+        }
+
+        return $this->render('JuanLuisLabBundle:Task:edit.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
 } 
