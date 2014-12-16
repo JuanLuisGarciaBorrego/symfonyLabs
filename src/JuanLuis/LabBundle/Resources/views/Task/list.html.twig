@@ -23,7 +23,7 @@
                     <td>{{ loop.index }}</td>
                     <td>{{ task.name }}</td>
                     <td class="text-right">
-                        <a class="btn btn-info" href="#" role="button"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-info" href="{{ path('juan_luis_lab_task_show', {'id':task.id}) }}" role="button"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-warning" href="{{ path('juan_luis_lab_task_update', {'id':task.id}) }}" role="button"><i class="fa fa-pencil"></i></a>
                         <a class="btn btn-danger" href="{{ path('juan_luis_lab_task_remove', {'id':task.id}) }}" role="button"><i class="fa fa-trash"></i></a>
                     </td>
@@ -36,6 +36,11 @@
                     </th>
                 </tr>
             {% endfor %}
+            <tr>
+                <th class="text-left" colspan="3">
+                    <a href="{{ path('juan_luis_lab_task_new') }}" class="btn btn-primary btn-xs">New Task</a>
+                </th>
+            </tr>
         </table>
     </div>
 

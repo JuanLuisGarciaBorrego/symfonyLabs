@@ -75,4 +75,17 @@ class TaskController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    public function showAction($id)
+    {
+        $task = $this->getDoctrine()->getRepository('JuanLuisLabBundle:Task')->find($id);
+
+        if(!$task){
+            throw $this->createNotFoundException("This task doesn't exist");
+        }
+
+        return $this->render('JuanLuisLabBundle:Task:show.html.twig', array(
+            'task' => $task
+        ));
+    }
 } 

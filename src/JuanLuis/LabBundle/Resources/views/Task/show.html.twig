@@ -1,0 +1,21 @@
+{% extends 'JuanLuisLabBundle::layout.html.twig' %}
+
+{% block title          'SymfonyLabs' %}
+{% block description    'Exercises about Symfony  ' %}
+
+{% block content %}
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1>Show Task</h1>
+     </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>{{ task.name }}</h2>
+            <p>{{ task.description }}</p>
+        </div>
+    </div>
+
+{% endblock %}

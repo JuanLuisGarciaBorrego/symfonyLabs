@@ -19,3 +19,7 @@ juan_luis_lab_task_update:
     path:     /update/{id}
     defaults: { _controller: JuanLuisLabBundle:Task:update }
     methods: [GET|POST]
+
+juan_luis_lab_task_show:
+    path:     /show/{id}
+    defaults: { _controller: JuanLuisLabBundle:Task:show }
