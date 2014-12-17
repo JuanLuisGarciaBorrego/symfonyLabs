@@ -10,7 +10,7 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class AddNameFieldOnlyForCreateNewTask implements EventSubscriberInterface
+class AddNameFieldOnlyForCreateNewTaskSubscriber implements EventSubscriberInterface
 {
     /**
      * Returns an array of event names this subscriber wants to listen to.

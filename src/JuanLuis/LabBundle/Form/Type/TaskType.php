@@ -6,7 +6,7 @@
 
 namespace JuanLuis\LabBundle\Form\Type;
 
-use JuanLuis\LabBundle\Form\EventListener\AddNameFieldOnlyForCreateNewTask;
+use JuanLuis\LabBundle\Form\EventListener\AddNameFieldOnlyForCreateNewTaskSubscriber;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -17,7 +17,7 @@ class TaskType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->addEventSubscriber(new AddNameFieldOnlyForCreateNewTask());
+        $builder->addEventSubscriber(new AddNameFieldOnlyForCreateNewTaskSubscriber());
 
         $builder
             ->add('description');
