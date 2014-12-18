@@ -35,6 +35,12 @@ class Task
      */
     private $description;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="taskDate", type="date")
+     */
+    private $taskDate;
 
     /**
      * Get id
@@ -90,5 +96,21 @@ class Task
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTaskDate()
+    {
+        return $this->taskDate;
+    }
+
+    /**
+     * @param \DateTime $taskDate
+     */
+    public function setTaskDate($taskDate)
+    {
+        $this->taskDate = $taskDate;
     }
 }

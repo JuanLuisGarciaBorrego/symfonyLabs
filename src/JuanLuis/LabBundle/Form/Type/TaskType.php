@@ -20,8 +20,8 @@ class TaskType extends AbstractType
         $builder->addEventSubscriber(new AddNameFieldOnlyForCreateNewTaskSubscriber());
 
         $builder
-            ->add('description');
-            // ->add('description');
+            ->add('description')
+            ->add('taskDate');
 
     }
 
